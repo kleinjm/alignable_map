@@ -1,0 +1,11 @@
+<!--
+This partial exists to solve one problem.
+I had a lot of syntactical issues trying to get the following to work in Haml
+
+:javascript
+  build_map('#{raw @hash.to_json}')
+-->
+
+<script type="text/javascript">
+  build_map(<%=raw @hash.to_json %>);
+</script>
