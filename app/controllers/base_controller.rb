@@ -3,7 +3,7 @@ class BaseController < ApplicationController
 
   def index
     # fetch the business data and place it into the wrapper object
-    json = JSON.load(open("https://alignableweb-dev2.herokuapp.com/v1/businesses?api_key=#{ENV['ALIGNABLE_KEY']}"))
+    json = JSON.load(open("https://alignableweb-dev2.herokuapp.com/v1/businesses?api_key=#{ENV['BUSINESS_API_KEY']}"))
     @businesses = []
     json["entries"].each do |entry|
       @businesses << Business.new(
@@ -27,7 +27,7 @@ class BaseController < ApplicationController
   def detail
     # fetch the business JSON for the business with the given id
     id = params[:id]
-    business = JSON.load(open("https://alignableweb-dev2.herokuapp.com/v1/businesses/#{id}?api_key=#{ENV['ALIGNABLE_KEY']}"))
+    business = JSON.load(open("https://alignableweb-dev2.herokuapp.com/v1/businesses/#{id}?api_key=#{ENV['BUSINESS_API_KEY']}"))
     render json: business
   end
 end
