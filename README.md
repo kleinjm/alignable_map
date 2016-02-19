@@ -1,7 +1,7 @@
 # Business Map
-Business Map is a simple web app that hits an API and diplays the results on a map. The API provides a list of businesses as well as an end-point for an individual business's details.
+Business Map is a simple web app that hits an API and displays the results on a map. The API provides a list of businesses as well as an end-point for an individual business's details.
 
-### Deprication Warning
+### Deprecation Warning
 The API is no longer available. However, this project is still a good example of how to parse JSON in Ruby and display it nicely in a Bootstrapped Rails application.
 
 ### Where to Look
